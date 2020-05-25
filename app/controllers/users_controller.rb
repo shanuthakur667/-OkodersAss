@@ -16,6 +16,8 @@ class UsersController < ApplicationController
     if ur.save
       redirect_to questions_path
       flash[:notice] = "You start follow this user"
+    else
+      redirect_to questions_path
     end
   end
 end

@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @question = Question.find_by(id: params[:id])
+    @question = Question.includes(:topic).find_by(id: params[:id])
     @answers = @question.answers
   end
 end
