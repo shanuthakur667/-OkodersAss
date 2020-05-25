@@ -1,0 +1,6 @@
+<% @answers.each do |ans|%>
+  <li class="answer"><%= ans.ans_content%></li>
+<% end %>
+
+<%= link_to "Follow Topic", follow_topic_users_path(topic_id: @question.topic), method: :post, class: 'follow_user'%>
+<%= link_to "Follow Topic", follow_topic_users_path(topic_id: @question.topic), method: :post, class: 'follow_user'%>

@@ -1,0 +1,25 @@
+<% unless @questions.nil? %>
+  <% if @questions.empty? %>
+    <h3>No Question found.</h3>
+  <% else %>
+    <h3>Search results</h3>
+
+    <table>
+      <thead>
+         <tr>
+          <th>Question</th>
+          <th>Action</th>
+         </tr>
+      </thead>
+
+      <tbody>
+        <% @questions.each do |que| %>
+          <tr>
+            <td><%= que.content %></td>
+            <td><%= link_to "Show", question_path(que)%></td>
+          </tr>
+        <% end %>
+      <tbody>
+    </table>
+  <% end %>
+<% end %>
