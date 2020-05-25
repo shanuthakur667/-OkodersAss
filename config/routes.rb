@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       post :follow_topic
+      post :follow_user
     end
   end
 

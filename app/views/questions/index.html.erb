@@ -1,3 +1,11 @@
+<%if user_signed_in? %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary'%>
+<% end %>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
 <% unless @questions.nil? %>
   <% if @questions.empty? %>
     <h3>No Question found.</h3>

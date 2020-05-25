@@ -2,5 +2,5 @@
   <li class="answer"><%= ans.ans_content%></li>
 <% end %>
 
-<%= link_to "Follow Topic", follow_topic_users_path(topic_id: @question.topic), method: :post, class: 'follow_user'%>
-<%= link_to "Follow Topic", follow_topic_users_path(topic_id: @question.topic), method: :post, class: 'follow_user'%>
+<%= link_to "Follow User", follow_user_users_path(question_id: @question.id), method: :post, class: 'follow_user'%>
+<%= link_to "Follow Topic", follow_topic_users_path(topic_id: @question.topic.id), method: :post, class: 'follow_topic'%>
